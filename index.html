@@ -1,132 +1,275 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
+<!doctype html>
+<html lang="zh-CN" class="no-js">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="个人主页" />
-    <title>个人主页</title>
-    <style>
-      :root {
-        --bg: #0f1419;
-        --surface: #1a2332;
-        --text: #e8ecf1;
-        --muted: #8b9aaf;
-        --accent: #5b9fd4;
-        --accent-hover: #7eb8e8;
-      }
-      *,
-      *::before,
-      *::after {
-        box-sizing: border-box;
-      }
-      html {
-        scroll-behavior: smooth;
-      }
-      body {
-        margin: 0;
-        min-height: 100vh;
-        font-family: system-ui, -apple-system, "Segoe UI", Roboto, "PingFang SC",
-          "Microsoft YaHei", sans-serif;
-        background: var(--bg);
-        color: var(--text);
-        line-height: 1.6;
-      }
-      a {
-        color: var(--accent);
-        text-decoration: none;
-      }
-      a:hover {
-        color: var(--accent-hover);
-        text-decoration: underline;
-      }
-      .wrap {
-        max-width: 42rem;
-        margin: 0 auto;
-        padding: 3rem 1.5rem 4rem;
-      }
-      header {
-        margin-bottom: 3rem;
-      }
-      h1 {
-        font-size: clamp(1.75rem, 5vw, 2.25rem);
-        font-weight: 600;
-        letter-spacing: -0.02em;
-        margin: 0 0 0.5rem;
-      }
-      .tagline {
-        color: var(--muted);
-        font-size: 1.05rem;
-        margin: 0;
-      }
-      section {
-        background: var(--surface);
-        border-radius: 12px;
-        padding: 1.5rem 1.75rem;
-        margin-bottom: 1.25rem;
-        border: 1px solid rgba(255, 255, 255, 0.06);
-      }
-      section h2 {
-        font-size: 0.85rem;
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
-        color: var(--muted);
-        margin: 0 0 0.75rem;
-        font-weight: 600;
-      }
-      section p {
-        margin: 0;
-        color: var(--text);
-      }
-      .links {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.75rem 1.25rem;
-      }
-      footer {
-        margin-top: 2.5rem;
-        padding-top: 1.5rem;
-        border-top: 1px solid rgba(255, 255, 255, 0.08);
-        font-size: 0.875rem;
-        color: var(--muted);
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        gap: 0.75rem 1.25rem;
-      }
-      footer a {
-        white-space: nowrap;
-      }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PaiPro | 智能记账官网</title>
+    <meta
+      name="description"
+      content="PaiPro 是一个简洁、可视化、好上手的记账应用。用更轻的操作记录支出，用更清晰的图表看懂消费结构。"
+    />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="wrap">
-      <header>
-        <h1>你的名字</h1>
-        <p class="tagline">开发者 · 写代码、做产品、记录想法</p>
-      </header>
+    <div class="parallax-orb orb-1" data-parallax data-speed="0.08" aria-hidden="true"></div>
+    <div class="parallax-orb orb-2" data-parallax data-speed="-0.06" aria-hidden="true"></div>
 
-      <section aria-labelledby="about-heading">
-        <h2 id="about-heading">关于</h2>
-        <p>
-          这里是一段简短的自我介绍。你可以替换为真实内容：目前关注的方向、工作经历或正在学习的技能。
+    <header class="top-nav">
+      <div class="nav-inner">
+        <a class="logo" href="#top">PaiPro</a>
+        <nav class="nav-links">
+          <a href="#features">核心能力</a>
+          <a href="#keynote">发布会动画</a>
+          <a href="#showcase">界面预览</a>
+          <a href="#cta">开始体验</a>
+        </nav>
+        <a class="nav-button" href="#cta">立即体验</a>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero section-shell">
+        <p class="eyebrow reveal is-visible">PaiPro · Personal AI Expense Tracker</p>
+        <h1 class="reveal is-visible" style="--delay: 40ms">把每一笔消费，变成可执行的财务洞察。</h1>
+        <p class="hero-subtitle reveal is-visible" style="--delay: 80ms">
+          从“记录支出”到“看懂趋势”，PaiPro 用健康消费比、分类统计和极简操作流程，
+          帮你把记账变成每天都愿意坚持的小习惯。
         </p>
-      </section>
+        <div class="hero-actions reveal is-visible" style="--delay: 120ms">
+          <a class="btn btn-primary" href="#showcase">查看产品界面</a>
+          <a class="btn btn-secondary" href="#features">了解功能细节</a>
+        </div>
 
-      <section aria-labelledby="contact-heading">
-        <h2 id="contact-heading">联系</h2>
-        <div class="links">
-          <a href="mailto:hello@example.com">邮箱</a>
-          <a href="https://github.com" rel="noopener noreferrer">GitHub</a>
+        <div class="hero-highlights">
+          <article class="highlight-card reveal" style="--delay: 20ms">
+            <p class="highlight-title">Healthy Ratio</p>
+            <p class="highlight-value">¥277</p>
+            <p class="highlight-text">首页环形图一眼看懂当月消费占比。</p>
+          </article>
+          <article class="highlight-card reveal" style="--delay: 120ms">
+            <p class="highlight-title">Quick Add</p>
+            <p class="highlight-value">7+ 分类</p>
+            <p class="highlight-text">餐饮、住房、交通等支出，轻点即可记账。</p>
+          </article>
+          <article class="highlight-card reveal" style="--delay: 220ms">
+            <p class="highlight-title">Category Detail</p>
+            <p class="highlight-value">3 Steps</p>
+            <p class="highlight-text">总额、明细、日期同屏展示，复盘更直接。</p>
+          </article>
+        </div>
+
+        <div class="hero-visual reveal" style="--delay: 100ms">
+          <img
+            src="images/photo_1_2026-05-09_17-38-31.jpg"
+            alt="PaiPro 首页消费占比界面"
+            class="shot shot-main parallax-media"
+            data-parallax
+            data-speed="0.14"
+            loading="lazy"
+          />
+          <img
+            src="images/photo_2_2026-05-09_17-38-31.jpg"
+            alt="PaiPro 新增支出界面"
+            class="shot shot-side parallax-media"
+            data-parallax
+            data-speed="-0.1"
+            loading="lazy"
+          />
         </div>
       </section>
 
-      <footer>
-        <span>© <span id="year"></span> 你的名字</span>
-        <a href="privacy.html">隐私政策</a>
-      </footer>
-    </div>
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
+      <section class="section-shell" id="features">
+        <div class="section-title-wrap reveal">
+          <p class="eyebrow">核心能力</p>
+          <h2>轻、快、准的记账体验</h2>
+        </div>
+        <div class="feature-grid">
+          <article class="feature reveal" style="--delay: 0ms">
+            <h3>可视化首页</h3>
+            <p>
+              首页环形图展示 Food &amp; Dining、Housing &amp; Bills、Other 等分类占比，
+              同时保留金额和进度条，快速识别消费结构。
+            </p>
+          </article>
+          <article class="feature reveal" style="--delay: 90ms">
+            <h3>极速记一笔</h3>
+            <p>
+              Add Expense 页面将金额输入、分类选择、备注输入整合在同一屏，减少跳转和中断，
+              让记录成本接近“零心智负担”。
+            </p>
+          </article>
+          <article class="feature reveal" style="--delay: 0ms">
+            <h3>分类追踪明细</h3>
+            <p>
+              进入单个分类后，可直接查看总额、笔数和每一笔支出明细（含日期与备注），
+              适合日常复盘和预算控制。
+            </p>
+          </article>
+          <article class="feature reveal" style="--delay: 90ms">
+            <h3>账户中心</h3>
+            <p>
+              统一管理 Category、Dark Mode 等偏好设置，搭配 Sign In / Register
+              流程，保障从首次使用到长期记账都保持一致的体验。
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="keynote-stage" id="keynote">
+        <div class="stage-panel panel-a">
+          <div class="stage-inner section-shell">
+            <div class="stage-copy reveal">
+              <p class="eyebrow">Apple Keynote Style</p>
+              <h2>滚动时，重点自动上场。</h2>
+              <p>
+                我们把“看总览”和“记新账”做成舞台式叙事：当你向下滚动，文案与界面分层进入，
+                让核心价值逐段放大，而不是一次性平铺信息。
+              </p>
+            </div>
+            <div class="stage-media">
+              <img
+                src="images/photo_1_2026-05-09_17-38-31.jpg"
+                alt="PaiPro 总览界面"
+                class="stage-shot stage-shot-front parallax-media"
+                data-parallax
+                data-speed="0.1"
+                loading="lazy"
+              />
+              <img
+                src="images/photo_2_2026-05-09_17-38-31.jpg"
+                alt="PaiPro 记账界面"
+                class="stage-shot stage-shot-back parallax-media"
+                data-parallax
+                data-speed="-0.07"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="stage-panel panel-b">
+          <div class="stage-inner section-shell">
+            <div class="stage-copy reveal">
+              <p class="eyebrow">Storytelling Scroll</p>
+              <h2>从账户到明细，形成完整闭环。</h2>
+              <p>
+                第二段强调“长期使用体验”：账户管理、分类详情、登录注册依次出场，
+                帮用户快速理解 PaiPro 的完整路径与产品成熟度。
+              </p>
+              <div class="stage-metrics">
+                <article>
+                  <h3>01</h3>
+                  <p>总览看趋势</p>
+                </article>
+                <article>
+                  <h3>02</h3>
+                  <p>一键记支出</p>
+                </article>
+                <article>
+                  <h3>03</h3>
+                  <p>分类做复盘</p>
+                </article>
+              </div>
+            </div>
+            <div class="stage-media stage-media-grid">
+              <img
+                src="images/photo_3_2026-05-09_17-38-31.jpg"
+                alt="PaiPro 我的页面"
+                class="stage-shot stage-grid-a parallax-media"
+                data-parallax
+                data-speed="0.09"
+                loading="lazy"
+              />
+              <img
+                src="images/photo_4_2026-05-09_17-38-31.jpg"
+                alt="PaiPro 分类详情页面"
+                class="stage-shot stage-grid-b parallax-media"
+                data-parallax
+                data-speed="-0.08"
+                loading="lazy"
+              />
+              <img
+                src="images/photo_5_2026-05-09_17-38-31.jpg"
+                alt="PaiPro 登录页面"
+                class="stage-shot stage-grid-c parallax-media"
+                data-parallax
+                data-speed="0.12"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-shell showcase" id="showcase">
+        <div class="section-title-wrap reveal">
+          <p class="eyebrow">界面预览</p>
+          <h2>每个关键场景，都被精心设计</h2>
+        </div>
+        <div class="showcase-grid">
+          <figure class="showcase-item reveal" style="--delay: 0ms">
+            <img src="images/photo_1_2026-05-09_17-38-31.jpg" alt="首页总览" loading="lazy" />
+            <figcaption>Home · 消费结构总览</figcaption>
+          </figure>
+          <figure class="showcase-item reveal" style="--delay: 80ms">
+            <img src="images/photo_2_2026-05-09_17-38-31.jpg" alt="新增支出" loading="lazy" />
+            <figcaption>Add Expense · 快速记账</figcaption>
+          </figure>
+          <figure class="showcase-item reveal" style="--delay: 160ms">
+            <img src="images/photo_4_2026-05-09_17-38-31.jpg" alt="分类详情" loading="lazy" />
+            <figcaption>Category Detail · 分类明细</figcaption>
+          </figure>
+          <figure class="showcase-item reveal" style="--delay: 0ms">
+            <img src="images/photo_3_2026-05-09_17-38-31.jpg" alt="我的账户" loading="lazy" />
+            <figcaption>Me · 账户与偏好设置</figcaption>
+          </figure>
+          <figure class="showcase-item reveal" style="--delay: 80ms">
+            <img src="images/photo_5_2026-05-09_17-38-31.jpg" alt="登录页面" loading="lazy" />
+            <figcaption>Sign In · 安全登录</figcaption>
+          </figure>
+          <figure class="showcase-item reveal" style="--delay: 160ms">
+            <img src="images/photo_6_2026-05-09_17-38-31.jpg" alt="注册页面" loading="lazy" />
+            <figcaption>Create Account · 新用户引导</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section-shell value-panel reveal">
+        <div class="value-copy">
+          <p class="eyebrow">为什么是 PaiPro</p>
+          <h2>简洁、克制的智能记账工具。</h2>
+          <p>
+            PaiPro 以“最少操作 + 最清晰反馈”为设计原则，减少输入负担，增强可视化反馈，
+            让记账不再是任务，而是一种自然发生的日常行为。
+          </p>
+        </div>
+        <div class="value-points">
+          <article class="reveal" style="--delay: 0ms">
+            <h3>01</h3>
+            <p>从登录到记账，流程简洁统一，学习成本低。</p>
+          </article>
+          <article class="reveal" style="--delay: 80ms">
+            <h3>02</h3>
+            <p>以分类和金额为核心，不淹没在复杂报表里。</p>
+          </article>
+          <article class="reveal" style="--delay: 160ms">
+            <h3>03</h3>
+            <p>支持暗色模式与分类管理，长期使用更舒适。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-shell cta reveal" id="cta">
+        <p class="eyebrow">Ready to start</p>
+        <h2>开始使用 PaiPro，掌控你的每一笔支出。</h2>
+        <p>更好的财务状态，从今天这一笔开始。</p>
+        <a class="btn btn-primary" href="#top">立即开始体验</a>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2026 ONE BYTE SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
   </body>
 </html>
