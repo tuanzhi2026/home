@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="个人主页" />
+    <title>个人主页</title>
+    <style>
+      :root {
+        --bg: #0f1419;
+        --surface: #1a2332;
+        --text: #e8ecf1;
+        --muted: #8b9aaf;
+        --accent: #5b9fd4;
+        --accent-hover: #7eb8e8;
+      }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, "PingFang SC",
+          "Microsoft YaHei", sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+      }
+      a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+      a:hover {
+        color: var(--accent-hover);
+        text-decoration: underline;
+      }
+      .wrap {
+        max-width: 42rem;
+        margin: 0 auto;
+        padding: 3rem 1.5rem 4rem;
+      }
+      header {
+        margin-bottom: 3rem;
+      }
+      h1 {
+        font-size: clamp(1.75rem, 5vw, 2.25rem);
+        font-weight: 600;
+        letter-spacing: -0.02em;
+        margin: 0 0 0.5rem;
+      }
+      .tagline {
+        color: var(--muted);
+        font-size: 1.05rem;
+        margin: 0;
+      }
+      section {
+        background: var(--surface);
+        border-radius: 12px;
+        padding: 1.5rem 1.75rem;
+        margin-bottom: 1.25rem;
+        border: 1px solid rgba(255, 255, 255, 0.06);
+      }
+      section h2 {
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--muted);
+        margin: 0 0 0.75rem;
+        font-weight: 600;
+      }
+      section p {
+        margin: 0;
+        color: var(--text);
+      }
+      .links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem 1.25rem;
+      }
+      footer {
+        margin-top: 2.5rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        font-size: 0.875rem;
+        color: var(--muted);
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.75rem 1.25rem;
+      }
+      footer a {
+        white-space: nowrap;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <h1>你的名字</h1>
+        <p class="tagline">开发者 · 写代码、做产品、记录想法</p>
+      </header>
+
+      <section aria-labelledby="about-heading">
+        <h2 id="about-heading">关于</h2>
+        <p>
+          这里是一段简短的自我介绍。你可以替换为真实内容：目前关注的方向、工作经历或正在学习的技能。
+        </p>
+      </section>
+
+      <section aria-labelledby="contact-heading">
+        <h2 id="contact-heading">联系</h2>
+        <div class="links">
+          <a href="mailto:hello@example.com">邮箱</a>
+          <a href="https://github.com" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </section>
+
+      <footer>
+        <span>© <span id="year"></span> 你的名字</span>
+        <a href="privacy.html">隐私政策</a>
+      </footer>
+    </div>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
